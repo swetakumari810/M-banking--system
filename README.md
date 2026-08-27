@@ -117,139 +117,21 @@ The project follows a **layered architecture** that separates the API, business 
 
 ---
 
-Setting Up the Project
+## ⚙️ Setting Up the Project
 
-Follow these steps to set up and run the Mini Banking System on your local machine.
+Follow the steps below to set up and run the **Mini Banking System** on your local machine.
 
-1. Prerequisites
+### 1. Prerequisites
 
-Make sure the following are installed:
+Before setting up the project, make sure the following software is installed:
 
-Java 25
-Maven
-PostgreSQL
-Git
-IntelliJ IDEA (recommended)
+- **Java 25**
+- **Maven**
+- **PostgreSQL**
+- **Git**
+- **IntelliJ IDEA** (recommended)
 
-Verify Java:
+Verify Java installation:
 
+```bash  
 java -version
-
-Verify Maven:
-
-mvn -version
-
-Verify Git:
-
-git --version
-2. Clone the Repository
-
-Clone the project from GitHub:
-
-git clone https://github.com/<your-username>/mini-banking-system.git
-
-Navigate to the project directory:
-
-cd mini-banking-system
-3. Create the PostgreSQL Database
-
-Open PostgreSQL / pgAdmin and create a database named:
-
-banking_system
-
-Or using SQL:
-
-CREATE DATABASE banking_system;
-
-Make sure the PostgreSQL server is running.
-
-4. Configure Database Credentials
-
-The application requires the following environment variables:
-
-DB_URL
-DB_USER
-DB_PASSWORD
-
-Example:
-
-DB_URL=jdbc:postgresql://localhost:5432/banking_system
-DB_USER=postgres
-DB_PASSWORD=your_postgresql_password
-
-Replace your_postgresql_password with your actual PostgreSQL password.
-
-5. Environment Configuration
-
-The project includes an .env.example file as a configuration template.
-
-Example:
-
-DB_URL=jdbc:postgresql://localhost:5432/banking_system
-DB_USER=postgres
-DB_PASSWORD=your_postgresql_password
-
-Create your local environment configuration using your own PostgreSQL credentials.
-
-Do not commit your actual .env file or database password to GitHub.
-
-6. Build the Project
-
-From the project root directory, run:
-
-mvn clean install
-
-This will:
-
-Clean previous build files
-Download Maven dependencies
-Compile the project
-Run the tests
-Package the application
-
-A successful build should end with:
-
-BUILD SUCCESS
-7. Run the Tests
-
-Run the complete test suite:
-
-mvn clean test
-
-The tests should complete with:
-
-Failures: 0
-Errors: 0
-Skipped: 0
-8. Run the Application
-
-Open the project in IntelliJ IDEA and run:
-
-BankingApplication
-
-The application starts on:
-
-http://localhost:8080
-
-You should see a message similar to:
-
-Tomcat started on port 8080
-9. Access Swagger API Documentation
-
-Once the application is running, Swagger/OpenAPI can be used to explore and test the REST APIs.
-
-Open:
-
-http://localhost:8080/swagger-ui.html
-
-Swagger allows you to:
-
-View available endpoints
-View request parameters
-View request bodies
-Execute API requests
-Test API responses
-
-The OpenAPI specification is available at:
-
-http://localhost:8080/v3/api-docs
